@@ -1,22 +1,27 @@
 <div class="c-medidor__header">
   <div class="c-medidor__text">
-    <p class="c-medidor__title">{{ title }}</p>
-    <p class="c-medidor__subtitle">{{ subtitle }}</p>
+    <p class="c-medidor__title">{{ config.title }}</p>
+    <p class="c-medidor__subtitle">{{ config.subtitle }}</p>
   </div>
 
   <div class="c-medidor__percentages">
-    <span class="c-medidor__percentage">{{ leftPercent }}%</span>
-    <span class="c-medidor__percentage">{{ rightPercent }}%</span>
+    <span class="c-medidor__percentage">{{ config.leftPercent.toFixed(1) }}%</span>
+    <span class="c-medidor__percentage">{{ config.rightPercent.toFixed(1) }}%</span>
   </div>
 </div>
 
 <div class="c-medidor__bar">
   <div
     class="c-medidor__bar-part c-medidor__bar-part--primary"
-    [style.width.%]="leftPercent">
+    [style.width.%]="config.leftPercent">
   </div>
   <div
     class="c-medidor__bar-part c-medidor__bar-part--secondary"
-    [style.width.%]="rightPercent">
+    [style.width.%]="config.rightPercent">
   </div>
+</div>
+
+<div class="c-medidor__legend">
+  <span class="c-medidor__label">{{ config.leftLabel }}</span>
+  <span class="c-medidor__label">{{ config.rightLabel }}</span>
 </div>

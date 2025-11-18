@@ -1,16 +1,63 @@
+:host {
+  display: block;
+}
+
 .p-dashboard {
+  --dashboard-gap: clamp(1.5rem, 3vw, 2.5rem);
 
-  --global-padding: var(--mlt-sys-padding-8); ;
-
-  padding: var(--global-padding);
+  min-height: 100vh;
+  padding: var(--dashboard-gap);
+  background-color: var(--exam-surface-color);
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--dashboard-gap);
 
-  &__top {
-    display: flex;
-    gap: 32px;
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+    gap: var(--dashboard-gap);
   }
 
- 
+  &__card {
+    width: 100%;
+  }
+
+  &__card--wide {
+    grid-row: span 1;
+  }
+
+  &__card--full {
+    width: 100%;
+  }
+
+  &__meters {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__full {
+    width: 100%;
+  }
+
+  &__full-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__full-caption {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--exam-color-text-gray);
+    font-weight: 600;
+  }
+
+  @media (max-width: 1024px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
 }

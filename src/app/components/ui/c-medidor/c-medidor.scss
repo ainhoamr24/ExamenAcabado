@@ -1,56 +1,99 @@
 :host {
-
   --medidor-font-weight-title: var(--mlt-sys-font-weight-4);
-
-  --medidor-color-bar-dark: var(--mlt-sys-color-medidor-1);
-  --medidor-color-bar-light: var(--mlt-sys-color-medidor-2);
-  --medidor-color-text: var(--mlt-sys-text-color-1);
+  --medidor-color-bar-primary: var(--mlt-sys-color-medidor-1);
+  --medidor-color-bar-secondary: var(--mlt-sys-color-medidor-2);
+  --medidor-color-text: #0f172a;
+  --medidor-color-text-muted: var(--exam-color-text-gray);
 
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.c-medidor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.c-medidor__text {
+  display: flex;
+  flex-direction: column;
   gap: 4px;
+}
 
-  .c-medidor__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.c-medidor__title {
+  font-weight: var(--medidor-font-weight-title);
+  color: var(--medidor-color-text);
+}
+
+.c-medidor__subtitle {
+  color: var(--medidor-color-text-muted);
+  font-size: 0.85rem;
+}
+
+.c-medidor__percentages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--medidor-color-text);
+  font-weight: 600;
+}
+
+.c-medidor__bar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 18px;
+  background-color: rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.c-medidor__bar-part {
+  height: 100%;
+  transition: width 250ms ease;
+
+  &--primary {
+    background-color: var(--medidor-color-bar-primary);
   }
 
-  .c-medidor__text {
-    display: flex;
-    flex-direction: column;
+  &--secondary {
+    background-color: var(--medidor-color-bar-secondary);
   }
+}
 
-  .c-medidor__title {
-    font-weight: var(--medidor-font-weight-title);
-  }
+.c-medidor__legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--medidor-color-text-muted);
+}
 
-  .c-medidor__subtitle {
-    color: var(--medidor-color-text);
-  }
+.c-medidor__label {
+  font-weight: 600;
+}
 
-  .c-medidor__percentages {
-    display: flex;
-    gap: 8px;
-    color: var(--medidor-color-text);
-  }
+:host(.c-medidor--bot) {
+  --medidor-color-bar-primary: #ff7a00;
+  --medidor-color-bar-secondary: #ffd5b3;
+}
 
-  .c-medidor__bar {
-    display: flex;
-    width: 100%;
-    height: 16px;
-    overflow: hidden;
-  }
+:host(.c-medidor--layer) {
+  --medidor-color-bar-primary: #2dd4bf;
+  --medidor-color-bar-secondary: #c4f5ed;
+}
 
-  .c-medidor__bar-part {
-    height: 100%;
+:host(.c-medidor--internet) {
+  --medidor-color-bar-primary: #4c1d95;
+  --medidor-color-bar-secondary: #c084fc;
+}
 
-    &--primary {
-      background-color: var(--medidor-color-bar-dark);
-    }
-
-    &--secondary {
-      background-color: var(--medidor-color-bar-ligh);
-    }
-  }
+:host(.c-medidor--http) {
+  --medidor-color-bar-primary: #dc2626;
+  --medidor-color-bar-secondary: #fecaca;
 }

@@ -1,19 +1,29 @@
 .l-listas {
-  display: flex;
-  gap: var(--mtl-sys-flex-gap-2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
 
   &--direction-row {
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
   }
 
   &--direction-column {
-    flex-direction: column;
+    grid-auto-flow: row;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--exam-border-color);
+    background-color: rgba(15, 23, 42, 0.02);
+    font-weight: 600;
+    color: #111827;
+  }
+
+  &__label {
+    text-transform: capitalize;
   }
 }
