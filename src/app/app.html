@@ -1,93 +1,54 @@
 <main class="p-dashboard">
-  <!-- Parte superior: dos tarjetas -->
-  <section class="p-dashboard__top">
-    <!-- Tarjeta izquierda con 3 medidores -->
-    <c-tarjeta class="p-dashboard__tarjeta">
+  <section class="p-dashboard__grid">
+    <c-tarjeta class="p-dashboard__card p-dashboard__card--wide">
       <div class="c-tarjeta__header">
-        <p class="c-tarjeta__title">Texto</p>
-        <p class="c-tarjeta__subtitle">texto</p>
+        <p class="c-tarjeta__eyebrow">Traffic</p>
+        <p class="c-tarjeta__title">Insights into HTTP requests distribution</p>
+        <p class="c-tarjeta__subtitle">
+          Mobile devices, automated agents, and network attacks shaping current traffic volumes.
+        </p>
       </div>
 
-      <c-medidor variant="mobile"></c-medidor>
-      <c-medidor variant="bot"></c-medidor>
-      <c-medidor variant="layer"></c-medidor>
+      <div class="p-dashboard__meters">
+        <c-medidor variant="mobile"></c-medidor>
+        <c-medidor variant="bot"></c-medidor>
+        <c-medidor variant="layer"></c-medidor>
+      </div>
     </c-tarjeta>
 
-    <!-- Tarjeta derecha con 2 medidores -->
-    <c-tarjeta class="p-dashboard__tarjeta">
+    <c-tarjeta class="p-dashboard__card">
       <div class="c-tarjeta__header">
-        <p class="c-tarjeta__title">Texto</p>
-        <p class="c-tarjeta__subtitle">Texto</p>
+        <p class="c-tarjeta__eyebrow">Adoption &amp; Usage</p>
+        <p class="c-tarjeta__title">Internet adoption and usage of key protocols</p>
+        <p class="c-tarjeta__subtitle">Protocol share across global HTTP requests.</p>
       </div>
 
-      <c-medidor variant="internet"></c-medidor>
-      <c-medidor variant="http"></c-medidor>
-
+      <div class="p-dashboard__meters">
+        <c-medidor variant="internet"></c-medidor>
+        <c-medidor variant="http"></c-medidor>
+      </div>
     </c-tarjeta>
   </section>
 
-  <!-- Tarjeta inferior a lo ancho -->
-  <section class="p-dashboard__bottom">
-    <c-tarjeta class="p-dashboard__tarjeta p-dashboard__tarjeta--full">
-      <div class="p-dashboard__bottom-content">
-        <div class="p-dashboard__bottom-text">
-          <p class="c-tarjeta__title">Texto</p>
-          <p class="c-tarjeta__subtitle">texto</p>
+  <section class="p-dashboard__full">
+    <c-tarjeta class="p-dashboard__card p-dashboard__card--full">
+      <div class="p-dashboard__full-header">
+        <div>
+          <p class="c-tarjeta__eyebrow">Internet services popularity</p>
+          <p class="c-tarjeta__title">Top 10 services based on HTTP request share (Q1 2024)</p>
+          <p class="c-tarjeta__subtitle">Most requested services from ISPs worldwide.</p>
         </div>
+        <p class="p-dashboard__full-caption">Traffic share %</p>
+      </div>
 
-        <!-- Lista con layout l-listas + atributo circulo -->
-        <div class="l-listas l-listas--direction-row">
+      <div class="l-listas l-listas--direction-row">
+        @for (service of popularServices; track service.rank) {
           <span class="l-listas__item">
-            <span circulo>1</span>
-            <span>google</span>
+            <span circulo>{{ service.rank }}</span>
+            <span class="l-listas__label">{{ service.name }}</span>
           </span>
-          <span class="l-listas__item">
-            <span circulo>2</span>
-            <span>instagram</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>3</span>
-            <span>WAs</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>4</span>
-            <span>Facebook</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>5</span>
-            <span>aws</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>6</span>
-            <span>amazon</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>7</span>
-            <span>micro</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>8</span>
-            <span>you</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>9</span>
-            <span>apple</span>
-          </span>
-          <span class="l-listas__item">
-            <span circulo>10</span>
-            <span>tiktok</span>
-          </span>
-        </div>
+        }
       </div>
     </c-tarjeta>
   </section>
 </main>
-
-
-<!--<main class="main">
-    <articles></articles>
-</main>
-
-
-
-<router-outlet />-->
