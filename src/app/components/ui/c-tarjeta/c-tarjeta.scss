@@ -12,6 +12,8 @@
 
   --tarjeta-font-weight-title: var(--mlt-sys-font-weight-4);
 
+  --tarjeta-font-size: var(--mlt-sys-font-size-6);
+
   width: var(--tarjeta-width);
   background-color: var(--tarjeta-background-color);
   border-radius: var(--tarjeta-border-radius);
@@ -38,5 +40,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  &__percentages {
+    font-size: var(--tarjeta-font-size);
+    font-weight: var(--mlt-sys-font-weight-5);
   }
 }

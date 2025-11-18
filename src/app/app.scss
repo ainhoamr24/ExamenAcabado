@@ -7,13 +7,10 @@
   flex-direction: column;
   gap: 32px;
 
-  &__arriba {
+  &__top {
     display: flex;
     gap: 32px;
   }
 
-  &__abajo {
-    display: flex;
-    justify-content: center;
-  }
+ 
 }
