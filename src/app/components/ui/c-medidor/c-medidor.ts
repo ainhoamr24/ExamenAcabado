@@ -22,7 +22,7 @@ const VARIANT_CONFIG: Record<MedidorVariant, VariantConfig> = {
   },
   bot: {
     title: 'Bots vs Human',
-    subtitle: 'Share of automated traffic hitting the edge.',
+    subtitle: 'Bot (automated) vs. human HTTP requests requests distributor.',
     leftLabel: 'Bots',
     rightLabel: 'Humans',
     leftPercent: 27.9,
@@ -30,7 +30,7 @@ const VARIANT_CONFIG: Record<MedidorVariant, VariantConfig> = {
   },
   layer: {
     title: 'Layer 3 & 4 Attacks',
-    subtitle: 'Traffic distribution across network attack layers.',
+    subtitle: 'DDos Attack Type',
     leftLabel: 'Layer 3',
     rightLabel: 'Layer 4',
     leftPercent: 40.1,
@@ -38,7 +38,7 @@ const VARIANT_CONFIG: Record<MedidorVariant, VariantConfig> = {
   },
   internet: {
     title: 'Internet Protocol versions',
-    subtitle: 'IPv4 vs IPv6 share of HTTP requests.',
+    subtitle: 'IPv4 vs IPv6',
     leftLabel: 'IPv4',
     rightLabel: 'IPv6',
     leftPercent: 60.4,
@@ -46,7 +46,7 @@ const VARIANT_CONFIG: Record<MedidorVariant, VariantConfig> = {
   },
   http: {
     title: 'HTTP versions',
-    subtitle: 'Usage share between HTTP/1.1 and HTTP/2+.',
+    subtitle: 'HTTP/1.x vs. HTTP/2',
     leftLabel: 'HTTP/1.1',
     rightLabel: 'HTTP/2+',
     leftPercent: 92.1,

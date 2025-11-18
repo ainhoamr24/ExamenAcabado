@@ -16,27 +16,22 @@
   gap: 24px;
 }
 
-.c-tarjeta__header {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .c-tarjeta__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.75rem;
-  color: var(--exam-color-text-gray);
-  font-weight: 600;
+  font-weight: var(--tarjeta-font-weight-title);
+  color: var(--tarjeta-color-text);
 }
 
 .c-tarjeta__title {
   font-weight: var(--tarjeta-font-weight-title);
-  font-size: 1.25rem;
-  color: var(--tarjeta-text-color);
+  color: var(--tarjeta-color-text);
 }
 
 .c-tarjeta__subtitle {
-  color: var(--exam-color-text-gray);
-  font-size: 0.95rem;
+  color: var(--tarjeta-color-text-muted);
+  font-size: var(--tarjeta-font-size-title);
+}
+
+.c-tarjeta__subtitle_subtitle {
+  color: var(--tarjeta-color-text-muted);
+  font-size: var(--tarjeta-font-size-title);
 }

@@ -3,14 +3,11 @@
 }
 
 .p-dashboard {
-  --dashboard-gap: clamp(1.5rem, 3vw, 2.5rem);
-
-  min-height: 100vh;
-  padding: var(--dashboard-gap);
+  padding: 40px;
   background-color: var(--exam-surface-color);
   display: flex;
   flex-direction: column;
-  gap: var(--dashboard-gap);
+  gap:10px;
 
   &__grid {
     display: grid;
