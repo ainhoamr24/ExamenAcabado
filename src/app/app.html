@@ -1,9 +1,93 @@
+<main class="p-dashboard">
+  <!-- Parte superior: dos tarjetas -->
+  <section class="p-dashboard__top">
+    <!-- Tarjeta izquierda con 3 medidores -->
+    <c-tarjeta class="p-dashboard__tarjeta">
+      <div class="c-tarjeta__header">
+        <p class="c-tarjeta__title">Texto</p>
+        <p class="c-tarjeta__subtitle">texto</p>
+      </div>
+
+      <c-medidor variant="mobile"></c-medidor>
+      <c-medidor variant="bot"></c-medidor>
+      <c-medidor variant="layer"></c-medidor>
+    </c-tarjeta>
+
+    <!-- Tarjeta derecha con 2 medidores -->
+    <c-tarjeta class="p-dashboard__tarjeta">
+      <div class="c-tarjeta__header">
+        <p class="c-tarjeta__title">Texto</p>
+        <p class="c-tarjeta__subtitle">Texto</p>
+      </div>
+
+      <c-medidor variant="internet"></c-medidor>
+      <c-medidor variant="http"></c-medidor>
+
+    </c-tarjeta>
+  </section>
+
+  <!-- Tarjeta inferior a lo ancho -->
+  <section class="p-dashboard__bottom">
+    <c-tarjeta class="p-dashboard__tarjeta p-dashboard__tarjeta--full">
+      <div class="p-dashboard__bottom-content">
+        <div class="p-dashboard__bottom-text">
+          <p class="c-tarjeta__title">Texto</p>
+          <p class="c-tarjeta__subtitle">texto</p>
+        </div>
+
+        <!-- Lista con layout l-listas + atributo circulo -->
+        <div class="l-listas l-listas--direction-row">
+          <span class="l-listas__item">
+            <span circulo>1</span>
+            <span>google</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>2</span>
+            <span>instagram</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>3</span>
+            <span>WAs</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>4</span>
+            <span>Facebook</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>5</span>
+            <span>aws</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>6</span>
+            <span>amazon</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>7</span>
+            <span>micro</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>8</span>
+            <span>you</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>9</span>
+            <span>apple</span>
+          </span>
+          <span class="l-listas__item">
+            <span circulo>10</span>
+            <span>tiktok</span>
+          </span>
+        </div>
+      </div>
+    </c-tarjeta>
+  </section>
+</main>
 
 
-<main class="main">
+<!--<main class="main">
     <articles></articles>
 </main>
 
 
 
-<router-outlet />
+<router-outlet />-->

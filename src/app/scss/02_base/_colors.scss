@@ -1,35 +1,20 @@
 @use "sass:list";
 @use "../01_utilities/index" as utilities;
 
-$red-colors: utilities.$red-colors;
-$alternative-colors: utilities.$alternative-colors;
-$gray-colors: utilities.$gray-colors;
-$white-colors: utilities.$white-colors;
-$yellow-colors: utilities.$yellow-colors;
-$main-colors: utilities.$main-colors;
+$text-colors: utilities.$text-colors;
+$medidor-colors: utilities.$medidor-colors;
+$background-colors: utilities.$background-colors;
 
 :root {
-  @for $i from 1 through list.length($red-colors) {
-    --mlt-sys-color-red-#{$i}: #{list.nth($red-colors, $i)};
+  @for $i from 1 through list.length($background-colors) {
+    --mlt-sys-color-background-#{$i}: #{list.nth($background-colors, $i)};
   }
 
-  @for $i from 1 through list.length($alternative-colors) {
-    --mlt-sys-color-alternative-#{$i}: #{list.nth($alternative-colors, $i)};
+  @for $i from 1 through list.length($text-colors) {
+    --mlt-sys-color-text-#{$i}: #{list.nth($text-colors, $i)};
   }
 
-  @for $i from 1 through list.length($gray-colors) {
-    --mlt-sys-color-gray-#{$i}: #{list.nth($gray-colors, $i)};
-  }
-
-  @for $i from 1 through list.length($white-colors) {
-    --mlt-sys-color-white-#{$i}: #{list.nth($white-colors, $i)};
-  }
-
-  @for $i from 1 through list.length($yellow-colors) {
-    --mlt-sys-color-yellow-#{$i}: #{list.nth($yellow-colors, $i)};
-  }
-
-  @for $i from 1 through list.length($main-colors) {
-    --mlt-sys-color-main-#{$i}: #{list.nth($main-colors, $i)};
+  @for $i from 1 through list.length($medidor-colors) {
+    --mlt-sys-color-medidor-#{$i}: #{list.nth($medidor-colors, $i)};
   }
 }

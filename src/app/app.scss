@@ -1,0 +1,19 @@
+.p-dashboard {
+
+  --global-padding: var(--mlt-sys-padding-8); ;
+
+  padding: var(--global-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__arriba {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__abajo {
+    display: flex;
+    justify-content: center;
+  }
+}

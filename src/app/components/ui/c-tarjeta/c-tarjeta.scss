@@ -1,0 +1,42 @@
+.c-tarjeta {
+
+  --tarjeta-width: var(--mlt-sys-width-11);
+
+  --tarjeta-background-color: var(--mlt-sys-background-color-1);
+  --tarjeta-text-color: var(--mlt-sys-text-color-1);
+
+  --tarjeta-border-radius: var(--mlt-sys-border-radius-3);
+
+  --tarjeta-padding-vertical: var(--mlt-sys-padding-4);
+  --tarjeta-padding-horizontal: var(--mlt-sys-padding-5);
+
+  --tarjeta-font-weight-title: var(--mlt-sys-font-weight-4);
+
+  width: var(--tarjeta-width);
+  background-color: var(--tarjeta-background-color);
+  border-radius: var(--tarjeta-border-radius);
+  padding: var(--tarjeta-padding-vertical) var(--tarjeta-padding-horizontal);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: var(--tarjeta-font-weight-title);
+  }
+
+  &__subtitle {
+    color: var(--exam-color-text-gray);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

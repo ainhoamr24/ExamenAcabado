@@ -1,0 +1,19 @@
+.l-listas {
+  display: flex;
+  gap: var(--mtl-sys-flex-gap-2);
+
+  &--direction-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &--direction-column {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

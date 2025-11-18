@@ -1,0 +1,56 @@
+:host {
+
+  --medidor-font-weight-title: var(--mlt-sys-font-weight-4);
+
+  --medidor-color-bar-dark: var(--mlt-sys-color-medidor-1);
+  --medidor-color-bar-light: var(--mlt-sys-color-medidor-2);
+  --medidor-color-text: var(--mlt-sys-text-color-1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .c-medidor__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .c-medidor__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-medidor__title {
+    font-weight: var(--medidor-font-weight-title);
+  }
+
+  .c-medidor__subtitle {
+    color: var(--medidor-color-text);
+  }
+
+  .c-medidor__percentages {
+    display: flex;
+    gap: 8px;
+    color: var(--medidor-color-text);
+  }
+
+  .c-medidor__bar {
+    display: flex;
+    width: 100%;
+    height: 16px;
+    overflow: hidden;
+  }
+
+  .c-medidor__bar-part {
+    height: 100%;
+
+    &--primary {
+      background-color: var(--medidor-color-bar-dark);
+    }
+
+    &--secondary {
+      background-color: var(--medidor-color-bar-ligh);
+    }
+  }
+}
