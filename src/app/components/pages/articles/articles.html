@@ -1,0 +1,21 @@
+<div class="l-flex l-flex--wrap l-flex--gap-2">
+  @for (article of articles; track article.id) {
+    @if (article) {
+      <c-article
+        [id]="article.id"
+        [name]="article.name"
+        [imageUrl]="article.imageUrl" 
+        [currentPrice]="article.currentPrice"
+        [previousPrice]="article.previousPrice"
+        [rating]="article.rating"
+        [reviewCount]="article.reviewCount"
+        [deliveryDate]="article.deliveryDate"
+        [deliveryPrice]="article.deliveryPrice"
+        [otherShippingOptions]="article.otherShippingOptions"
+      ></c-article>
+    }
+  }
+  @empty {
+    <p>No hay artículos disponibles</p>
+  }
+</div>

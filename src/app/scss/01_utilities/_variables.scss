@@ -1,0 +1,88 @@
+$paddings:(2px, 4px, 8px, 16px, 32px);
+$font-sizes:(12px, 14px, 16px, 20px, 24px, 32px, 48px);
+$border-radiuses:(2px, 4px, 8px, 16px);
+$flex-gaps:(4px, 8px, 16px, 32px);
+$heights:(16px, 24px, 32px, 48px, 64px, 80px, 96px, 128px);
+$widths:(16px, 24px, 32px, 48px, 64px, 80px, 96px, 128px, 256px, 512px);
+$font-weights:(300, 400, 500, 600, 700);
+$margins:(2px, 4px, 8px, 16px, 32px);
+
+$font-families: (
+  "default": 'Elms Sans', 
+  "h3": 'Oswald', 
+  "logo": 'Momo Signature',
+  );
+
+$main-colors: (
+  #011019,
+  #052F4D,
+  #0B4D83,
+  #1363B4,
+  #1979E6,
+  #4B8EEC,
+  #80ADF4,
+  #B2CAFA,
+  #E6EDFE
+);
+
+$alternative-colors: (
+  #190801,
+  #4D1D05,
+  #83370B,
+  #B45613,
+  #E67519,
+  #EC9C4B,
+  #F4BE80,
+  #FADCB2,
+  #FEF5E6
+);
+
+$red-colors: (
+  #190501,
+  #4D0D05,
+  #83150B,
+  #B41813,
+  #E61919,
+  #EC534B,
+  #F48A80,
+  #FABCB2,
+  #FEEAE6
+);
+
+$gray-colors: (
+  #1D2830,
+  #323E49,
+  #485461,
+  #5C6775,
+  #717D8E,
+  #8A93A3,
+  #A1A9BA,
+  #B6BDCD,
+  #CFD4E2
+);
+
+$white-colors: (
+  #EBEBEB,
+  #EDEDED,
+  #F0F0F0,
+  #F2F2F2,
+  #F5F5F5,
+  #F7F7F7,
+  #FAFAFA,
+  #FCFCFC,
+  #FFFFFF
+);
+
+$yellow-colors: (
+  #6D5303,
+  #9A7809,
+  #C69C10,
+  #E9BC1C,
+  #ECC94B,
+  #F2D978,
+  #F7E7A6,
+  #FCF4CF,
+  #FFFFFF
+);
+
+

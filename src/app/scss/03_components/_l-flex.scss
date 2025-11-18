@@ -1,0 +1,70 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+
+$flex-gaps: utilities.$flex-gaps;
+
+:root{
+    @for $i from 1 through list.length($flex-gaps) {
+        --mtl-sys-flex-gap-#{$i}: #{list.nth($flex-gaps, $i)};
+    }
+}
+
+.l-flex {
+    display: flex;
+
+    &--direction-row {
+        flex-direction: row;
+    }
+
+    &--direction-column {
+        flex-direction: column;
+    }
+
+    &--justify-start {
+        justify-content: flex-start;
+    }
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--justify-end {
+        justify-content: flex-end;
+    }
+
+    &--align-start {
+        align-items: flex-start;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
+
+    &--align-end {
+        align-items: flex-end;
+    }
+
+    &--wrap {
+        flex-wrap: wrap;
+    }
+
+    &--gap-1 {
+        gap: var(--mtl-sys-flex-gap-1);
+    }
+
+    &--gap-2 {
+        gap: var(--mtl-sys-flex-gap-2);
+    }
+
+    &--gap-3 {
+        gap: var(--mtl-sys-flex-gap-3);
+    }
+
+    &--gap-4 {
+        gap: var(--mtl-sys-flex-gap-4);
+    }
+
+    &--gap-5 {
+        gap: var(--mtl-sys-flex-gap-5);
+    }
+}

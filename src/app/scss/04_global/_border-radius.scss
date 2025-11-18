@@ -1,0 +1,55 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+
+$border-radiuses: utilities.$border-radiuses;
+
+
+:root {
+  // Generar variables CSS
+  @for $i from 1 through list.length($border-radiuses) {
+    --mlt-sys-border-radius-#{$i}: #{list.nth($border-radiuses, $i)};
+  }
+
+  // Generar utilidades usando &
+  @for $i from 1 through list.length($border-radiuses) {
+    .g--border-radius-#{$i} {
+      border-radius: var(--mlt-sys-border-radius-#{$i});
+
+      &-top {
+        border-top-left-radius: var(--mlt-sys-border-radius-#{$i});
+        border-top-right-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-right {
+        border-top-right-radius: var(--mlt-sys-border-radius-#{$i});
+        border-bottom-right-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-bottom {
+        border-bottom-right-radius: var(--mlt-sys-border-radius-#{$i});
+        border-bottom-left-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-left {
+        border-top-left-radius: var(--mlt-sys-border-radius-#{$i});
+        border-bottom-left-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-top-left {
+        border-top-left-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-top-right {
+        border-top-right-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-bottom-right {
+        border-bottom-right-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+
+      &-bottom-left {
+        border-bottom-left-radius: var(--mlt-sys-border-radius-#{$i});
+      }
+    }
+  }
+}

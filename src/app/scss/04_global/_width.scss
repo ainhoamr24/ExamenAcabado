@@ -1,0 +1,16 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+
+$widths: utilities.$widths;
+
+:root {
+    @for $i from 1 through list.length($widths) {
+        --mlt-sys-width-#{$i}: #{list.nth($widths, $i)};
+    }
+
+    @for $i from 1 through list.length($widths) {
+        .g--width-#{$i} {
+            width: var(--mlt-sys-width-#{$i});
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+
+$font-sizes: utilities.$font-sizes;
+
+:root {
+    @for $i from 1 through list.length($font-sizes) {
+        --mlt-sys-font-size-#{$i}: #{list.nth($font-sizes, $i)};
+    }
+
+    @for $i from 1 through list.length($font-sizes) {
+        .g--font-size-#{$i} {
+            font-size: var(--mlt-sys-font-size-#{$i});
+        }
+    }
+}

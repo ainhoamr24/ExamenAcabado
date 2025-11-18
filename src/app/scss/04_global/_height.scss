@@ -1,0 +1,14 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+$heights: utilities.$heights;
+:root {
+    @for $i from 1 through list.length($heights) {
+        --mlt-sys-height-#{$i}: #{list.nth($heights, $i)};
+    }
+
+    @for $i from 1 through list.length($heights) {
+        .g--height-#{$i} {
+            height: var(--mlt-sys-height-#{$i});
+        }
+    }
+}

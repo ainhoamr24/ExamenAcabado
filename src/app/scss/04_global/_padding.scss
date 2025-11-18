@@ -1,0 +1,44 @@
+@use "sass:list";
+@use "../01_utilities/index" as utilities;
+
+$paddings: utilities.$paddings;
+
+:root {
+  // Variables CSS
+  @for $i from 1 through list.length($paddings) {
+    --mlt-sys-padding-#{$i}: #{list.nth($paddings, $i)};
+  }
+
+  // Utilidades usando &
+  @for $i from 1 through list.length($paddings) {
+    .g--padding-#{$i} {
+      padding: var(--mlt-sys-padding-#{$i});
+
+      &-top {
+        padding-top: var(--mlt-sys-padding-#{$i});
+      }
+
+      &-right {
+        padding-right: var(--mlt-sys-padding-#{$i});
+      }
+
+      &-bottom {
+        padding-bottom: var(--mlt-sys-padding-#{$i});
+      }
+
+      &-left {
+        padding-left: var(--mlt-sys-padding-#{$i});
+      }
+
+      &-horizontal {
+        padding-left: var(--mlt-sys-padding-#{$i});
+        padding-right: var(--mlt-sys-padding-#{$i});
+      }
+
+      &-vertical {
+        padding-top: var(--mlt-sys-padding-#{$i});
+        padding-bottom: var(--mlt-sys-padding-#{$i});
+      }
+    }
+  }
+}
